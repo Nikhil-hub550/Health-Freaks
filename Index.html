@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Health Freaks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 12%;
+}
+.tablink:hover {
+  background-color: #777;
+}
+.tabcontent{
+  color: black;
+  display: none;
+  padding: 100px 20px;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background:black;
+  color: white;
+  font-size: 30px;
+}
+.container1 {
+  position: relative;
+  text-align: center;
+  color: white;
+  }
+  .top-left {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+.container2 {
+  position: relative;
+  width: 80%;
+  margin:auto;
+  padding:10px
+}
+
+.image {
+  display: block;
+  width: 50%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container2:hover .overlay {
+  opacity: 1;
+}
+
+.text1 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container3 {
+  padding: 16px;
+  background-color: black;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container5 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid white;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: grey;}
+
+#customers tr:hover {background-color: white;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: grey;
+  color: white;
+}
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+  }
+
+#Home {background-color:crimson;}
+#AboutUs {background-color: green;}
+#Trainer {background-color:coral;}
+#Clients {background-color:orange;}
+#Schedule {background-color:tomato;}
+#ContactUs {background-color:indianred;}
+#RegisterNow {background-color:navy;}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Health Freaks</h1>
+  <p>HUSTLE TO GAIN MORE MUSCLE</p>
+</div>
+
+<button class="tablink" onclick="openPage('Home', this, 'crimson')"id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('AboutUs', this, 'green')">About Us</button>
+<button class="tablink" onclick="openPage('Trainer', this, 'coral')">Trainers</button>
+<button class="tablink" onclick="openPage('Clients', this, 'orange')">Clients</button>
+<button class="tablink" onclick="openPage('Schedule', this, 'tomato')">Schedule</button>
+<button class="tablink" onclick="openPage('ContactUs', this, 'indianred')">Contact Us</button>
+<button class="tablink" onclick="openPage('RegisterNow', this, 'navy')">Register Now</button>
+
+<div id="Home" class="tabcontent">
+<div class="main">
+<h1>INSIDE VIEW</h1>
+<hr>
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="C:\Users\sunshine\Desktop\Website\images\1.1.jpg" alt="Snow"style="width:100%;">
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="C:\Users\sunshine\Desktop\Website\images\1.4.jpg" alt="Snow"style="width:100%;">
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="C:\Users\sunshine\Desktop\Website\images\1.9.jpg" alt="Snow"style="width:100%;">
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+   <img src="C:\Users\sunshine\Desktop\Website\images\1.6.jpg" alt="Snow"style="width:100%;">
+    </div>
+  </div>
+  </div>
+  </div>
+
+<div class="content">
+  <img src="C:\Users\sunshine\Desktop\Website\images\4.1.jpg" alt="Snow"style="width:100%;">
+</div>
+<h1><b>WHO WE ARE</b></h1>
+<p>Kaged Muscle is proud to be a supplement line of deep integrity. We source the purest, most potent raw materials, perform rigorous laboratory and real-world testing, adhere to third-party quality assurance practices, and have an unwavering commitment to quality and safety. This is the foundation upon which Kaged Muscle was built.
+ 
+
+At Kaged Muscle, we believe that you should never have to compromise on quality for price. We believe that every supplement you put into your body should be the of purest, most natural and highest quality form. We believe that these products should be deeply rooted in real science. But above all, we believe these products should be safe.
+ 
+
+Our mission at Kaged Muscle is simple: to deliver scientifically backed, superior, but affordable, products that contain the highest quality ingredients and utilize the most innovative technologies.
+ 
+
+We are dedicated to education and transparency. We arethe first ultra-premium sports nutrition supplement line of its kind, created to help health and fitness enthusiasts of all levels reach their goals, without cutting corners or compromising on quality. An educated consumer will understand Kaged Muscle’s value and get the most out of every scoop, every workout.
+ 
+
+Our products are fully transparent and formulated with the purest, patented ingredients backed by extensive scientific validation. We don’t hide behind proprietary blends, inflated studies or borrowed science in an attempt to try to uphold cheap, generic ingredients. Our passionate and dedicated team of world-class scientists continually evaluate the latest human clinical data on important nutrients, vitamins, minerals, and phytochemicals and source best-in-quality ingredients for our formulas.
+ 
+
+We never compromise on our commitment to quality and safety because your health and well-being are of paramount importance to us.</p>
+
+  <img src="C:\Users\sunshine\Desktop\Website\images\service-bg.jpg" alt="Snow"style="width:100%;">
+  <div class="container1">
+  <form action="/action_page.php">
+  <div class="container3">
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+    <label for="Name"><b>First Name</b></label>
+    <input type="text" placeholder="Enter Name" name="fname" required>
+    <label for="Name"><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Name" name="lname" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <hr>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  
+  <div class="container3 signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+  </div>
+</form>
+
+</div>
+	</div>
+  
+
+<div id="AboutUs" class="tabcontent">
+<div class="container1">
+  <img src="C:\Users\sunshine\Desktop\Website\images\about-bg.jpg" alt="Snow"style="width:100%;">
+  <div class="top-left"><h1>About Us</h1></div>
+</div>
+<h1><b>WHO WE ARE</b></h1>
+<p>Kaged Muscle is proud to be a supplement line of deep integrity. We source the purest, most potent raw materials, perform rigorous laboratory and real-world testing, adhere to third-party quality assurance practices, and have an unwavering commitment to quality and safety. This is the foundation upon which Kaged Muscle was built.
+ 
+
+At Kaged Muscle, we believe that you should never have to compromise on quality for price. We believe that every supplement you put into your body should be the of purest, most natural and highest quality form. We believe that these products should be deeply rooted in real science. But above all, we believe these products should be safe.
+ 
+
+Our mission at Kaged Muscle is simple: to deliver scientifically backed, superior, but affordable, products that contain the highest quality ingredients and utilize the most innovative technologies.
+ 
+
+We are dedicated to education and transparency. We arethe first ultra-premium sports nutrition supplement line of its kind, created to help health and fitness enthusiasts of all levels reach their goals, without cutting corners or compromising on quality. An educated consumer will understand Kaged Muscle’s value and get the most out of every scoop, every workout.
+ 
+
+Our products are fully transparent and formulated with the purest, patented ingredients backed by extensive scientific validation. We don’t hide behind proprietary blends, inflated studies or borrowed science in an attempt to try to uphold cheap, generic ingredients. Our passionate and dedicated team of world-class scientists continually evaluate the latest human clinical data on important nutrients, vitamins, minerals, and phytochemicals and source best-in-quality ingredients for our formulas.
+ 
+
+We never compromise on our commitment to quality and safety because your health and well-being are of paramount importance to us.</p>
+<div class="main">
+<h1>INSIDE VIEW</h1>
+<hr>
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="C:\Users\sunshine\Desktop\Website\images\1.1.jpg" alt="Snow"style="width:100%;">
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="C:\Users\sunshine\Desktop\Website\images\1.4.jpg" alt="Snow"style="width:100%;">
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="C:\Users\sunshine\Desktop\Website\images\1.9.jpg" alt="Snow"style="width:100%;">
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+   <img src="C:\Users\sunshine\Desktop\Website\images\1.6.jpg" alt="Snow"style="width:100%;">
+    </div>
+  </div>
+  </div>
+  </div>
+
+<div class="content">
+  <img src="C:\Users\sunshine\Desktop\Website\images\4.1.jpg" alt="Snow"style="width:100%;">
+</div>
+
+</div>
+
+<div id="Trainer" class="tabcontent">
+<div class="container1">
+  <img src="C:\Users\sunshine\Desktop\Website\images\service-bg.jpg" alt="Snow"style="width:100%;">
+  <div class="top-left"><h1>OUR COACHES</h1></div>
+</div>
+  <div class="container2">
+  <img src="C:\Users\sunshine\Desktop\Website\images\coaches1.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text1">DAVID WILLIAMS<br><b>Fitness Trainer</b><br>Knowledge and Know-How<br>Name in one of the best trainer all over India</div>
+  </div>
+</div>
+<div class="container2">
+  <img src="C:\Users\sunshine\Desktop\Website\images\coaches2.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text1">JACOB BARE<br><b>Weight Loss</b>.<br>Well trained<br>Great comunication skills</div>
+  </div>
+</div>
+<div class="container2">
+  <img src="C:\Users\sunshine\Desktop\Website\images\coaches3.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text1">SENIOER FALL<br><b>Gym Fitness</b><br>Well trained<br>Full of energy</div>
+  </div>
+</div>
+
+<div class="container2">
+  <img src="C:\Users\sunshine\Desktop\Website\images\coaches4.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text1">NINJA<br><b>Muscle Specialist</b><br>Great communication skills</div>
+  </div>
+</div>
+
+
+</div>
+
+<div align="center" id="Clients"class="tabcontent">
+  <h1>OUR HAPPY CLIENTS</h1>
+<img src="C:\Users\sunshine\Desktop\Website\images\2.9.jpg" alt="Snow"style="width:50%;">
+<div>
+<h1>ROBERT KRIS</h1>
+<p><b>One of the most premium gyms that opened recently in chandigarh,<br> High Tech equipment and professionally trained trainers by trainer.<br>Attended the launch event and got to see some demonstration as well</b> </p>
+</div>
+
+<img src="C:\Users\sunshine\Desktop\Website\images\feature1.jpg" alt="Snow"style="width:50%;">
+<h1>Kris Gethlin</h1>
+<p><b>Helpful staff, better than most gyms i've seen in England Very<br> clean equipment and very well equipped. PT knew how to manage<br> my workout to my injuries and fitness.Fitness level-assisted stretching<br> which was an addded plus! showers and lockers very clean had toiletries <br>for use Price reflects the kind of place it is!</b></p>
+<img src="C:\Users\sunshine\Desktop\Website\images\2.3.jpg" alt="Snow"style="width:50%;">
+<h1>Johnson</h1>
+<p><b>This gym is totally worth its value. <br> The equipment is the best in class<br> Gym kept very clean and is never too crowded</b></p>
+</div>
+</div>
+
+<div align="center"id="Schedule"class="tabcontent">
+  <table id="customers">
+  <thead >
+							<tr>
+								<th >Course name</th>
+								<th >Monday</th>
+								<th >Tuesday</th>
+								<th >Wednesday</th>
+								<th >Thursday</th>
+								<th >Friday</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th >Flex Muscle</th>
+								<td>02.00</td>
+								<td>10.00</td>
+								<td>02.00</td>
+								<td>02.00</td>
+								<td>10.00</td>
+							</tr>
+							<tr>
+								<th >Welghtifting</th>
+								<td>02.00</td>
+								<td>10.00</td>
+								<td>02.00</td>
+								<td>02.00</td>
+								<td>10.00</td>
+							</tr>
+							<tr>
+								<th >Target Specific Muscle</th>
+								<td>02.00</td>
+								<td>10.00</td>
+								<td>02.00</td>
+								<td>02.00</td>
+								<td>10.00</td>
+							</tr>
+							<tr>
+								<th >Aerobics</th>
+								<td>02.00</td>
+								<td>10.00</td>
+								<td>02.00</td>
+								<td>02.00</td>
+								<td>10.00</td>
+							</tr>
+							<tr>
+								<th >Fitness Training</th>
+								<td>02.00</td>
+								<td>10.00</td>
+								<td>02.00</td>
+								<td>02.00</td>
+								<td>10.00</td>
+							</tr>
+							<tr>
+								<th >Body Building</th>
+								<td>02.00</td>
+								<td>10.00</td>
+								<td>02.00</td>
+								<td>02.00</td>
+								<td>10.00</td>
+							</tr>
+						</tbody>
+</table>
+<h1>Featured classes</h1>
+<img src="C:\Users\sunshine\Desktop\Website\images\feature1.jpg" alt="Snow"style="width:50%;">
+<h1>Cycling Training</h1>
+<img src="C:\Users\sunshine\Desktop\Website\images\feature2.jpg" alt="Snow"style="width:50%;">
+<h1>Tone Muscle</h1>
+<img src="C:\Users\sunshine\Desktop\Website\images\feature3.jpg" alt="Snow"style="width:50%;">
+</div>
+</div>
+<div id="ContactUs"class="tabcontent">
+  <div class="container1">
+  <img src="C:\Users\sunshine\Desktop\Website\images\frined-bg.jpg" alt="Snow"style="width:100%;">
+  <div class="top-left"><h1>Contact Us</h1></div>
+</div>
+
+<div class="content5">
+<h3>Contact Form</h3>
+
+<div class="container5">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<div>
+<h3>CONTACT US</h3>
+<p>NIKHIL RAI - 7015067376</p>
+<p>HARASEES KAUR - 6239345466</p>
+</div>
+</div>
+</div>
+<div id="RegisterNow"class="tabcontent">
+  <div class="container1">
+  <img src="C:\Users\sunshine\Desktop\Website\images\banner-bg.jpg" alt="Snow"style="width:100%;">
+  <div class="top-left"><h1>Register Now</h1></div>
+  <form action="/action_page.php">
+  <div class="container3">
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+    <label for="Name"><b>First Name</b></label>
+    <input type="text" placeholder="Enter Name" name="fname" required>
+    <label for="Name"><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Name" name="lname" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <hr>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  
+  <div class="container3 signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+  </div>
+</form>
+
+</div>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
