@@ -3,256 +3,7 @@
 <head>
 <title>Health Freaks</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial;
-}
-.tablink {
-  background-color: #555;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 12%;
-}
-.tablink:hover {
-  background-color: #777;
-}
-.tabcontent{
-  color: black;
-  display: none;
-  padding: 100px 20px;
-}
-
-.header {
-  padding: 60px;
-  text-align: center;
-  background:black;
-  color: white;
-  font-size: 30px;
-}
-.container1 {
-  position: relative;
-  text-align: center;
-  color: white;
-  }
-  .top-left {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
-.container2 {
-  position: relative;
-  width: 80%;
-  margin:auto;
-  padding:10px
-}
-
-.image {
-  display: block;
-  width: 50%;
-  height: auto;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 20;
-  right: 0;
-  height: 100%;
-  width: 50%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
-}
-
-.container2:hover .overlay {
-  opacity: 1;
-}
-
-.text1 {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-
-* {
-  box-sizing: border-box;
-}
-
-/* Add padding to containers */
-.container3 {
-  padding: 16px;
-  background-color: black;
-}
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Overwrite default styles of hr */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for the submit button */
-.registerbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.registerbtn:hover {
-  opacity: 1;
-}
-
-/* Add a blue text color to links */
-a {
-  color: dodgerblue;
-}
-
-/* Set a grey background color and center the text of the "sign in" section */
-.signin {
-  background-color: #f1f1f1;
-  text-align: center;
-}
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-.container5 {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-#customers {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#customers td, #customers th {
-  border: 1px solid white;
-  padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: grey;}
-
-#customers tr:hover {background-color: white;}
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: grey;
-  color: white;
-}
-.main {
-  max-width: 1000px;
-  margin: auto;
-}
-
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-}
-
-.row {
-  margin: 8px -16px;
-}
-
-/* Add padding BETWEEN each column */
-.row,
-.row > .column {
-  padding: 8px;
-}
-
-/* Create four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-}
-
-/* Clear floats after rows */ 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
-  .column {
-    width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-  }
-
-#Home {background-color:crimson;}
-#AboutUs {background-color: green;}
-#Trainer {background-color:coral;}
-#Clients {background-color:orange;}
-#Schedule {background-color:tomato;}
-#ContactUs {background-color:indianred;}
-#RegisterNow {background-color:navy;}
-</style>
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 <div class="header">
@@ -275,29 +26,29 @@ h1 {
 <div class="row">
   <div class="column">
     <div class="content">
-      <img src="C:\Users\sunshine\Desktop\Website\images\1.1.jpg" alt="Snow"style="width:100%;">
+      <img src="../images/1.1.jpg" alt="Snow"style="width:100%;">
     </div>
   </div>
   <div class="column">
     <div class="content">
-    <img src="C:\Users\sunshine\Desktop\Website\images\1.4.jpg" alt="Snow"style="width:100%;">
+    <img src="../images/1.4.jpg" alt="Snow"style="width:100%;">
     </div>
   </div>
   <div class="column">
     <div class="content">
-    <img src="C:\Users\sunshine\Desktop\Website\images\1.9.jpg" alt="Snow"style="width:100%;">
+    <img src="../images/1.9.jpg" alt="Snow"style="width:100%;">
     </div>
   </div>
   <div class="column">
     <div class="content">
-   <img src="C:\Users\sunshine\Desktop\Website\images\1.6.jpg" alt="Snow"style="width:100%;">
+   <img src="../images/1.6.jpg" alt="Snow"style="width:100%;">
     </div>
   </div>
   </div>
   </div>
 
 <div class="content">
-  <img src="C:\Users\sunshine\Desktop\Website\images\4.1.jpg" alt="Snow"style="width:100%;">
+  <img src="../images/4.1.jpg" alt="Snow"style="width:100%;">
 </div>
 <h1><b>WHO WE ARE</b></h1>
 <p>Kaged Muscle is proud to be a supplement line of deep integrity. We source the purest, most potent raw materials, perform rigorous laboratory and real-world testing, adhere to third-party quality assurance practices, and have an unwavering commitment to quality and safety. This is the foundation upon which Kaged Muscle was built.
@@ -317,7 +68,7 @@ Our products are fully transparent and formulated with the purest, patented ingr
 
 We never compromise on our commitment to quality and safety because your health and well-being are of paramount importance to us.</p>
 
-  <img src="C:\Users\sunshine\Desktop\Website\images\service-bg.jpg" alt="Snow"style="width:100%;">
+  <img src="../images/service-bg.jpg" alt="Snow"style="width:100%;">
   <div class="container1">
   <form action="/action_page.php">
   <div class="container3">
@@ -354,7 +105,7 @@ We never compromise on our commitment to quality and safety because your health 
 
 <div id="AboutUs" class="tabcontent">
 <div class="container1">
-  <img src="C:\Users\sunshine\Desktop\Website\images\about-bg.jpg" alt="Snow"style="width:100%;">
+  <img src="../images/about-bg.jpg" alt="Snow"style="width:100%;">
   <div class="top-left"><h1>About Us</h1></div>
 </div>
 <h1><b>WHO WE ARE</b></h1>
@@ -380,59 +131,59 @@ We never compromise on our commitment to quality and safety because your health 
 <div class="row">
   <div class="column">
     <div class="content">
-      <img src="C:\Users\sunshine\Desktop\Website\images\1.1.jpg" alt="Snow"style="width:100%;">
+      <img src="../images/1.1.jpg" alt="Snow"style="width:100%;">
     </div>
   </div>
   <div class="column">
     <div class="content">
-    <img src="C:\Users\sunshine\Desktop\Website\images\1.4.jpg" alt="Snow"style="width:100%;">
+    <img src="../images/1.4.jpg" alt="Snow"style="width:100%;">
     </div>
   </div>
   <div class="column">
     <div class="content">
-    <img src="C:\Users\sunshine\Desktop\Website\images\1.9.jpg" alt="Snow"style="width:100%;">
+    <img src="../images/1.9.jpg" alt="Snow"style="width:100%;">
     </div>
   </div>
   <div class="column">
     <div class="content">
-   <img src="C:\Users\sunshine\Desktop\Website\images\1.6.jpg" alt="Snow"style="width:100%;">
+   <img src="../images/1.6.jpg" alt="Snow"style="width:100%;">
     </div>
   </div>
   </div>
   </div>
 
 <div class="content">
-  <img src="C:\Users\sunshine\Desktop\Website\images\4.1.jpg" alt="Snow"style="width:100%;">
+  <img src="../images/4.1.jpg" alt="Snow"style="width:100%;">
 </div>
 
 </div>
 
 <div id="Trainer" class="tabcontent">
 <div class="container1">
-  <img src="C:\Users\sunshine\Desktop\Website\images\service-bg.jpg" alt="Snow"style="width:100%;">
+  <img src="../images/service-bg.jpg" alt="Snow"style="width:100%;">
   <div class="top-left"><h1>OUR COACHES</h1></div>
 </div>
   <div class="container2">
-  <img src="C:\Users\sunshine\Desktop\Website\images\coaches1.jpg" alt="Avatar" class="image">
+  <img src="../images/coaches1.jpg" alt="Avatar" class="image">
   <div class="overlay">
     <div class="text1">DAVID WILLIAMS<br><b>Fitness Trainer</b><br>Knowledge and Know-How<br>Name in one of the best trainer all over India</div>
   </div>
 </div>
 <div class="container2">
-  <img src="C:\Users\sunshine\Desktop\Website\images\coaches2.jpg" alt="Avatar" class="image">
+  <img src="../images/coaches2.jpg" alt="Avatar" class="image">
   <div class="overlay">
     <div class="text1">JACOB BARE<br><b>Weight Loss</b>.<br>Well trained<br>Great comunication skills</div>
   </div>
 </div>
 <div class="container2">
-  <img src="C:\Users\sunshine\Desktop\Website\images\coaches3.jpg" alt="Avatar" class="image">
+  <img src="../images/coaches3.jpg" alt="Avatar" class="image">
   <div class="overlay">
     <div class="text1">SENIOER FALL<br><b>Gym Fitness</b><br>Well trained<br>Full of energy</div>
   </div>
 </div>
 
 <div class="container2">
-  <img src="C:\Users\sunshine\Desktop\Website\images\coaches4.jpg" alt="Avatar" class="image">
+  <img src="../images/coaches4.jpg" alt="Avatar" class="image">
   <div class="overlay">
     <div class="text1">NINJA<br><b>Muscle Specialist</b><br>Great communication skills</div>
   </div>
@@ -443,16 +194,16 @@ We never compromise on our commitment to quality and safety because your health 
 
 <div align="center" id="Clients"class="tabcontent">
   <h1>OUR HAPPY CLIENTS</h1>
-<img src="C:\Users\sunshine\Desktop\Website\images\2.9.jpg" alt="Snow"style="width:50%;">
+<img src="../images/2.9.jpg" alt="Snow"style="width:50%;">
 <div>
 <h1>ROBERT KRIS</h1>
 <p><b>One of the most premium gyms that opened recently in chandigarh,<br> High Tech equipment and professionally trained trainers by trainer.<br>Attended the launch event and got to see some demonstration as well</b> </p>
 </div>
 
-<img src="C:\Users\sunshine\Desktop\Website\images\feature1.jpg" alt="Snow"style="width:50%;">
+<img src="../images/feature1.jpg" alt="Snow"style="width:50%;">
 <h1>Kris Gethlin</h1>
 <p><b>Helpful staff, better than most gyms i've seen in England Very<br> clean equipment and very well equipped. PT knew how to manage<br> my workout to my injuries and fitness.Fitness level-assisted stretching<br> which was an addded plus! showers and lockers very clean had toiletries <br>for use Price reflects the kind of place it is!</b></p>
-<img src="C:\Users\sunshine\Desktop\Website\images\2.3.jpg" alt="Snow"style="width:50%;">
+<img src="../images/2.3.jpg" alt="Snow"style="width:50%;">
 <h1>Johnson</h1>
 <p><b>This gym is totally worth its value. <br> The equipment is the best in class<br> Gym kept very clean and is never too crowded</b></p>
 </div>
@@ -522,16 +273,16 @@ We never compromise on our commitment to quality and safety because your health 
 						</tbody>
 </table>
 <h1>Featured classes</h1>
-<img src="C:\Users\sunshine\Desktop\Website\images\feature1.jpg" alt="Snow"style="width:50%;">
+<img src="../images/feature1.jpg" alt="Snow"style="width:50%;">
 <h1>Cycling Training</h1>
-<img src="C:\Users\sunshine\Desktop\Website\images\feature2.jpg" alt="Snow"style="width:50%;">
+<img src="../images/feature2.jpg" alt="Snow"style="width:50%;">
 <h1>Tone Muscle</h1>
-<img src="C:\Users\sunshine\Desktop\Website\images\feature3.jpg" alt="Snow"style="width:50%;">
+<img src="../images/feature3.jpg" alt="Snow"style="width:50%;">
 </div>
 </div>
 <div id="ContactUs"class="tabcontent">
   <div class="container1">
-  <img src="C:\Users\sunshine\Desktop\Website\images\frined-bg.jpg" alt="Snow"style="width:100%;">
+  <img src="../images/frined-bg.jpg" alt="Snow"style="width:100%;">
   <div class="top-left"><h1>Contact Us</h1></div>
 </div>
 
@@ -562,13 +313,13 @@ We never compromise on our commitment to quality and safety because your health 
 <div>
 <h3>CONTACT US</h3>
 <p>NIKHIL RAI - 7015067376</p>
-<p>HARASEES KAUR - 6239345466</p>
+<p>HARASEES KAUR - 6239315280</p>
 </div>
 </div>
 </div>
 <div id="RegisterNow"class="tabcontent">
   <div class="container1">
-  <img src="C:\Users\sunshine\Desktop\Website\images\banner-bg.jpg" alt="Snow"style="width:100%;">
+  <img src="../images/banner-bg.jpg" alt="Snow"style="width:100%;">
   <div class="top-left"><h1>Register Now</h1></div>
   <form action="/action_page.php">
   <div class="container3">
@@ -601,25 +352,7 @@ We never compromise on our commitment to quality and safety because your health 
 
 </div>
 </div>
-
-<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
+<script src="../script/script.js"></script>
    
 </body>
 </html> 
